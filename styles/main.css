@@ -1,0 +1,196 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía */
+body {
+  font-family: 'Jost', sans-serif;
+  background-color: #F2F2F7;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Contenedor */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #0088FF;
+}
+
+.logo img {
+  width: 24px;
+}
+
+/* Navegación */
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #6b6b6b;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #0059FF;
+}
+
+/* Botón */
+.btn-outline {
+  padding: 8px 16px;
+  border: 1.5px solid #0088FF;
+  background: transparent;
+  color: #0088FF;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #0059FF;
+  color: white;
+}
+
+
+
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* luego puedes hacer hamburguesa */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Banner */
+.banner {
+  background: #F2F2F7;
+  padding: 80px 0 40px;
+  text-align: center;
+}
+
+/* Contenido */
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Título */
+.banner h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.3;
+  max-width: 900px;
+}
+
+/* Palabras destacadas */
+.highlight {
+  color: #0088FF;
+}
+
+/* Texto */
+.banner p {
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* Marca dentro del texto */
+.brand {
+  color: #0088FF;
+  font-weight: 600;
+}
+
+/* Botón principal */
+.btn-primary {
+  margin-top: 10px;
+  padding: 14px 28px;
+  background: #0088FF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #0059FF;
+}
+
+/* Imagen */
+.banner-image {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-image img {
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+
+  .banner h1 {
+    font-size: 28px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .banner-image img {
+    width: 100%;
+  }
+
+}
+
+
+.banner-image img {
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
