@@ -282,7 +282,7 @@ html {
 ========================= */
 
 .hands-on {
-  background: #ffffff;
+  background: #F2F2F7;
   padding: 80px 0;
   text-align: center;
 }
@@ -486,5 +486,243 @@ html {
 
   .section-divider {
     height: 60px;
+  }
+}
+
+/* =========================
+   TESTIMONIOS
+========================= */
+
+.testimonios {
+  background: #F8FBFB;
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* =========================
+   ALUMNOS
+========================= */
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.testimonio-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.testimonio-header img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.badge-small {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #E6F9F3;
+  color: #00A389;
+}
+
+.testimonio-card h3 {
+  font-size: 16px;
+}
+
+.role {
+  font-size: 13px;
+  color: #777;
+}
+
+.testimonio-card p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* =========================
+   DOCENTES
+========================= */
+
+.docentes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.docente-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.docente-card:hover {
+  transform: translateY(-5px);
+} 
+
+/* imagen cuadrada más compacta */
+.docente-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: 210px;
+  max-width: 210px;
+  overflow: hidden;
+}
+
+.docente-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.docente-info {
+  padding: 15px;
+  text-align: left;
+}
+
+/* nombre + universidad */
+.docente-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.docente-top img {
+  width: 55px;
+}
+
+.docente-info span {
+  font-size: 13px;
+  color: #777;
+}
+
+/* linkedin + link */
+.docente-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #0088FF;
+  text-decoration: none;
+}
+
+.docente-bottom img {
+  width: 16px;
+}
+
+/* =========================
+   TESTIMONIO DESTACADO
+========================= */
+
+.testimonio-highlight {
+  position: relative;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 40px auto 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.quote-icon {
+  font-size: 100px;
+  color: #0088FF;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  opacity: 0.3;
+}
+
+.testimonio-highlight p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+/* footer estilo correcto */
+.highlight-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.highlight-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.highlight-user img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.stars {
+  font-size: 14px;
+  color: #f5a623;
+}
+
+.highlight-uni {
+  width: 60px;
+  opacity: 0.8;
+}
+
+/* flechas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: #f2f2f7;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.arrow.left { left: -20px; }
+.arrow.right { right: -20px; }
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .testimonios-grid,
+  .docentes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .arrow {
+    display: none;
   }
 }

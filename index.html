@@ -7,6 +7,48 @@
 </head>
 <body>
 
+<script>
+const testimonios = [
+  {
+    texto: "“MentorEdu me ha permitido identificar con anticipación a los estudiantes que presentan dificultades. Antes, este proceso era manual y tomaba mucho tiempo. Ahora puedo actuar de manera oportuna y brindar apoyo más personalizado, lo que impacta directamente en el rendimiento del grupo.”.",
+    nombre: "Carlos Mendoza",
+    img: "assets/images/doc1.png",
+    logo: "assets/icons/uni.png"
+  },
+  {
+    texto: "“La plataforma facilita enormemente el seguimiento académico. Los reportes automáticos y las alertas me permiten tomar decisiones basadas en datos reales, en lugar de intuición. Esto mejora la calidad de la enseñanza y optimiza el tiempo dentro y fuera del aula.”",
+    nombre: "José Ramírez",
+    img: "assets/images/doc2.png",
+    logo: "assets/icons/uni2.png"
+  },
+  {
+    texto: "“Una de las mayores ventajas de MentorEdu es la visibilidad que ofrece sobre el progreso de los estudiantes. Puedo ver patrones de comportamiento, detectar riesgos y ajustar mis estrategias de enseñanza. Es una herramienta que realmente aporta valor al proceso educativo.”",
+    nombre: "Luis Herrera",
+    img: "assets/images/doc3.png",
+    logo: "assets/icons/uni3.png"
+  }
+];
+
+let index = 0;
+
+function updateTestimonio() {
+  document.getElementById("testimonio-text").innerText = testimonios[index].texto;
+  document.getElementById("testimonio-nombre").innerText = testimonios[index].nombre;
+  document.getElementById("testimonio-img").src = testimonios[index].img;
+  document.getElementById("testimonio-logo").src = testimonios[index].logo;
+}
+
+function nextTestimonio() {
+  index = (index + 1) % testimonios.length;
+  updateTestimonio();
+}
+
+function prevTestimonio() {
+  index = (index - 1 + testimonios.length) % testimonios.length;
+  updateTestimonio();
+}
+</script>
+
   <header class="header">
     <div class="container">
         
@@ -167,7 +209,162 @@
   </div>
 </section>
 
-  <section id="testimonios"></section>
+<section id="testimonios" class="testimonios">
+  <div class="container">
+
+    <!-- ALUMNOS -->
+    <span class="section-tag">ALUMNOS</span>
+    <h2>Lo que dicen nuestros estudiantes</h2>
+
+    <div class="testimonios-grid">
+
+      <div class="testimonio-card">
+        <div class="testimonio-header">
+          <img src="assets/images/user1.png" alt="">
+          <span class="badge-small green">+20% Mejora</span>
+        </div>
+        <h3>Ana Torres</h3>
+        <span class="role">Ingeniería de Software</span>
+        <p>
+          “Antes no tenía claro cómo iba en mis cursos. Con MentorEdu pude ver mi progreso en tiempo real y saber exactamente en qué debo mejorar.”
+        </p>
+      </div>
+
+      <div class="testimonio-card">
+        <div class="testimonio-header">
+          <img src="assets/images/user2.png" alt="">
+          <span class="badge-small green">+18% Mejora</span>
+        </div>
+        <h3>Camila Rojas</h3>
+        <span class="role">Psicología</span>
+        <p>
+          “Las alertas han sido clave. Me avisan cuando estoy bajando rendimiento y puedo reaccionar a tiempo.”
+        </p>
+      </div>
+
+      <div class="testimonio-card">
+        <div class="testimonio-header">
+          <img src="assets/images/user3.png" alt="">
+          <span class="badge-small green">+15% Mejora</span>
+        </div>
+        <h3>Luis Fernández</h3>
+        <span class="role">Administración</span>
+        <p>
+          “El dashboard me da una visión clara de cómo voy y qué debo mejorar. Todo está mucho más organizado.”
+        </p>
+      </div>
+
+    </div>
+
+    <!-- DOCENTES -->
+    <span class="section-tag mt">DOCENTES</span>
+    <h2>Lo que dicen nuestros docentes</h2>
+
+      <div class="docente-card">
+        <div class="docente-img">
+          <img src="assets/images/doc1.png">
+        </div>
+
+        <div class="docente-info">
+
+          <div class="docente-top">
+            <h3>Carlos Mendoza</h3>
+            <img src="assets/icons/uni.png">
+          </div>
+
+          <span>Profesor de Matemática</span>
+
+          <div class="docente-bottom">
+            <a href="#">
+              <img src="assets/icons/linkedin.png">
+              Ver perfil
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="docente-card">
+        <div class="docente-img">
+          <img src="assets/images/doc2.png">
+        </div>
+
+        <div class="docente-info">
+
+          <div class="docente-top">
+            <h3>José Ramírez</h3>
+            <img src="assets/icons/uni2.png">
+          </div>
+
+          <span>Profesor de Ingeniería</span>
+
+          <div class="docente-bottom">
+            <a href="#">
+              <img src="assets/icons/linkedin.png">
+              Ver perfil
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="docente-card">
+        <div class="docente-img">
+          <img src="assets/images/doc3.png">
+        </div>
+
+        <div class="docente-info">
+
+          <div class="docente-top">
+            <h3>Luis Herrera</h3>
+            <img src="assets/icons/uni3.png">
+          </div>
+
+          <span>Profesor de Estadística</span>
+
+          <div class="docente-bottom">
+            <a href="#">
+              <img src="assets/icons/linkedin.png">
+              Ver perfil
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TESTIMONIO DESTACADO -->
+    <div class="testimonio-highlight">
+
+      <div class="quote-icon">“</div>
+
+      <p id="testimonio-text">
+        La plataforma facilita enormemente el seguimiento académico...
+      </p>
+
+      <div class="highlight-footer">
+
+        <div class="highlight-user">
+          <img id="testimonio-img" src="assets/images/doc1.png">
+
+          <div>
+            <strong id="testimonio-nombre">Carlos Mendoza</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <img id="testimonio-logo" class="highlight-uni" src="assets/icons/uni.png">
+
+      </div>
+
+      <button class="arrow left" onclick="prevTestimonio()">‹</button>
+      <button class="arrow right" onclick="nextTestimonio()">›</button>
+
+    </div>
+
+  </div>
+</section>
 
   <section id="faq"></section>
 
