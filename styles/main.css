@@ -25,6 +25,9 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;   
+}
+
+.header .container {
   height: 70px;
   display: flex;
   align-items: center;
@@ -191,4 +194,85 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Sección */
+.beneficios {
+  background: #F8FBFB;
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* Tag */
+.section-tag {
+  color: #0088FF;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* Título */
+.beneficios h2 {
+  font-size: 32px;
+  margin: 10px 0 40px;
+}
+
+/* Grid */
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Cards */
+.card {
+  background: #F2F2F7;
+  padding: 30px 25px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+/* Icono */
+.icon {
+  width: 60px;
+  height: 60px;
+  background: #0088FF;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+/* Título card */
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Texto */
+.card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .beneficios h2 {
+    font-size: 24px;
+  }
+
 }
