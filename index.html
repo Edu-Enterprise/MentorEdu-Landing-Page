@@ -5,49 +5,8 @@
   <title>MentorEdu</title>
   <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
-
-<script>
-const testimonios = [
-  {
-    texto: "“MentorEdu me ha permitido identificar con anticipación a los estudiantes que presentan dificultades. Antes, este proceso era manual y tomaba mucho tiempo. Ahora puedo actuar de manera oportuna y brindar apoyo más personalizado, lo que impacta directamente en el rendimiento del grupo.”.",
-    nombre: "Carlos Mendoza",
-    img: "assets/images/doc1.png",
-    logo: "assets/icons/uni.png"
-  },
-  {
-    texto: "“La plataforma facilita enormemente el seguimiento académico. Los reportes automáticos y las alertas me permiten tomar decisiones basadas en datos reales, en lugar de intuición. Esto mejora la calidad de la enseñanza y optimiza el tiempo dentro y fuera del aula.”",
-    nombre: "José Ramírez",
-    img: "assets/images/doc2.png",
-    logo: "assets/icons/uni2.png"
-  },
-  {
-    texto: "“Una de las mayores ventajas de MentorEdu es la visibilidad que ofrece sobre el progreso de los estudiantes. Puedo ver patrones de comportamiento, detectar riesgos y ajustar mis estrategias de enseñanza. Es una herramienta que realmente aporta valor al proceso educativo.”",
-    nombre: "Luis Herrera",
-    img: "assets/images/doc3.png",
-    logo: "assets/icons/uni3.png"
-  }
-];
-
-let index = 0;
-
-function updateTestimonio() {
-  document.getElementById("testimonio-text").innerText = testimonios[index].texto;
-  document.getElementById("testimonio-nombre").innerText = testimonios[index].nombre;
-  document.getElementById("testimonio-img").src = testimonios[index].img;
-  document.getElementById("testimonio-logo").src = testimonios[index].logo;
-}
-
-function nextTestimonio() {
-  index = (index + 1) % testimonios.length;
-  updateTestimonio();
-}
-
-function prevTestimonio() {
-  index = (index - 1 + testimonios.length) % testimonios.length;
-  updateTestimonio();
-}
-</script>
 
   <header class="header">
     <div class="container">
@@ -57,7 +16,7 @@ function prevTestimonio() {
         <span>MentorEdu</span>
         </div>
 
-        <nav class="nav">
+        <nav class="nav" id="nav">
         <a href="#banner">Inicio</a>
         <a href="#beneficios">Beneficios</a>
         <a href="#funcionalidades">Servicios</a>
@@ -67,9 +26,11 @@ function prevTestimonio() {
         </nav>
 
         <button class="btn-outline">Registrarse</button>
+        <div class="hamburger" id="hamburger">☰</div>
 
     </div>
   </header>
+
 
   <section id="banner" class="banner">
     <div class="container banner-content">
@@ -95,279 +56,478 @@ function prevTestimonio() {
     </div>
   </section>
 
+
   <section id="beneficios" class="beneficios">
-  <div class="container">
+    <div class="container">
 
-    <span class="section-tag">BENEFICIOS</span>
-    <h2>¿Por qué usar nuestra aplicacion ?</h2>
+      <span class="section-tag">BENEFICIOS</span>
+      <h2>¿Por qué usar nuestra aplicacion ?</h2>
 
-    <div class="beneficios-grid">
+      <div class="beneficios-grid">
 
-      <div class="card">
-        <div class="icon"><img src="assets/icons/hourglass.png" alt="hourglass"></div>
-        <h3>Seguimiento en tiempo real</h3>
-        <p>
-          Visualiza el progreso académico de manera clara e inmediata, sin esperar evaluaciones finales.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon"><img src="assets/icons/alert.png" alt="alert"></div>
-        <h3>Alertas tempranas inteligentes</h3>
-        <p>
-          Detecta riesgos de bajo rendimiento y actúa antes de que sea demasiado tarde.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon"><img src="assets/icons/book.png" alt="book"></div>
-        <h3>Mejora del aprendizaje</h3>
-        <p>
-          Recibe recomendaciones personalizadas para optimizar el estudio y mejorar resultados.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section id="funcionalidades" class="hands-on">
-  <div class="container">
-
-    <!-- DOCENTE -->
-    <span class="section-tag">DOCENTE</span>
-
-    <div class="hands-top">
-
-  <!-- IZQUIERDA -->
-  <div class="hands-left">
-    <h2>Gestión inteligente del aula</h2>
-
-    <p class="hands-subtitle">
-      Supervisa el progreso de tus estudiantes, identifica riesgos y toma decisiones pedagógicas basadas en datos en tiempo real.
-    </p>
-
-    <div class="hands-buttons">
-      <div class="badge green">
-        <strong>+30%</strong>
-        <span>Mejora en seguimiento</span>
-      </div>
-
-      <div class="badge purple">
-        <strong>Tiempo real</strong>
-        <span>Monitoreo continuo</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- DERECHA (CUADRO) -->
-  <div class="features-box">
-    <h4>Funcionalidades</h4>
-    <ul>
-      <li>Panel de control por clase</li>
-      <li>Monitoreo individual y grupal</li>
-      <li>Identificación de alumnos en riesgo</li>
-      <li>Reportes académicos automatizados</li>
-    </ul>
-  </div>
-
-</div>
-
-    <!-- Imagen DOCENTE -->
-    <div class="hands-image">
-      <img src="assets/images/docente-dashboard.png" alt="Panel docente">
-    </div>
-
-    <p class="hands-text">
-      <span class="brand">MentorEdu</span> permite a los <span class="highlight">docentes</span> analizar el 
-      <span class="highlight">desempeño</span> académico de sus estudiantes de forma clara y eficiente,
-      facilitando la <span class="highlight">detección temprana</span> de dificultades y mejorando la 
-      toma de <span class="highlight">decisiones</span>.
-    </p>
-
-    <!-- SEPARACIÓN -->
-    <div class="section-divider"></div>
-
-    <!-- ESTUDIANTE -->
-    <span class="section-tag">ESTUDIANTE</span>
-
-    <h2>Control total de tu aprendizaje</h2>
-
-    <!-- Imagen -->
-    <div class="hands-image">
-      <img src="assets/images/estudiante-dashboard.png" alt="Panel estudiante">
-    </div>
-
-    <p class="hands-text">
-      Con una interfaz intuitiva, <span class="brand">MentorEdu</span> ayuda a los 
-      <span class="highlight">estudiantes</span> a visualizar su progreso, identificar 
-      <span class="highlight">debilidades</span> y tomar <span class="highlight">acciones</span> 
-      concretas para mejorar su <span class="highlight">rendimiento</span>.
-    </p>
-
-  </div>
-</section>
-
-<section id="testimonios" class="testimonios">
-  <div class="container">
-
-    <!-- ALUMNOS -->
-    <span class="section-tag">ALUMNOS</span>
-    <h2>Lo que dicen nuestros estudiantes</h2>
-
-    <div class="testimonios-grid">
-
-      <div class="testimonio-card">
-        <div class="testimonio-header">
-          <img src="assets/images/user1.png" alt="">
-          <span class="badge-small green">+20% Mejora</span>
+        <div class="card">
+          <div class="icon"><img src="assets/icons/hourglass.png" alt="hourglass"></div>
+          <h3>Seguimiento en tiempo real</h3>
+          <p>
+            Visualiza el progreso académico de manera clara e inmediata, sin esperar evaluaciones finales.
+          </p>
         </div>
-        <h3>Ana Torres</h3>
-        <span class="role">Ingeniería de Software</span>
-        <p>
-          “Antes no tenía claro cómo iba en mis cursos. Con MentorEdu pude ver mi progreso en tiempo real y saber exactamente en qué debo mejorar.”
-        </p>
-      </div>
 
-      <div class="testimonio-card">
-        <div class="testimonio-header">
-          <img src="assets/images/user2.png" alt="">
-          <span class="badge-small green">+18% Mejora</span>
+        <div class="card">
+          <div class="icon"><img src="assets/icons/alert.png" alt="alert"></div>
+          <h3>Alertas tempranas inteligentes</h3>
+          <p>
+            Detecta riesgos de bajo rendimiento y actúa antes de que sea demasiado tarde.
+          </p>
         </div>
-        <h3>Camila Rojas</h3>
-        <span class="role">Psicología</span>
-        <p>
-          “Las alertas han sido clave. Me avisan cuando estoy bajando rendimiento y puedo reaccionar a tiempo.”
-        </p>
-      </div>
 
-      <div class="testimonio-card">
-        <div class="testimonio-header">
-          <img src="assets/images/user3.png" alt="">
-          <span class="badge-small green">+15% Mejora</span>
+        <div class="card">
+          <div class="icon"><img src="assets/icons/book.png" alt="book"></div>
+          <h3>Mejora del aprendizaje</h3>
+          <p>
+            Recibe recomendaciones personalizadas para optimizar el estudio y mejorar resultados.
+          </p>
         </div>
-        <h3>Luis Fernández</h3>
-        <span class="role">Administración</span>
-        <p>
-          “El dashboard me da una visión clara de cómo voy y qué debo mejorar. Todo está mucho más organizado.”
-        </p>
+
       </div>
 
     </div>
+  </section>
 
-    <!-- DOCENTES -->
-<span class="section-tag mt">DOCENTES</span>
-<h2>Lo que dicen nuestros docentes</h2>
 
-<div class="docentes-grid">
+  <section id="funcionalidades" class="hands-on">
+    <div class="container">
 
-  <div class="docente-card">
-    <div class="docente-img">
-      <img src="assets/images/doc1.png">
-    </div>
+      <!-- DOCENTE -->
+      <span class="section-tag">DOCENTE</span>
 
-    <div class="docente-info">
-      <div class="docente-top">
-        <h3>Carlos Mendoza</h3>
-        <img src="assets/icons/uni.png">
-      </div>
+      <div class="hands-top">
 
-      <span>Profesor de Matemática</span>
+    <!-- IZQUIERDA -->
+    <div class="hands-left">
+      <h2>Gestión inteligente del aula</h2>
 
-      <div class="docente-bottom">
-        <a href="#">
-          <img src="assets/icons/linkedin.png">
-          Ver perfil
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="docente-card">
-    <div class="docente-img">
-      <img src="assets/images/doc2.png">
-    </div>
-
-    <div class="docente-info">
-      <div class="docente-top">
-        <h3>José Ramírez</h3>
-        <img src="assets/icons/uni2.png">
-      </div>
-
-      <span>Profesor de Ingeniería</span>
-
-      <div class="docente-bottom">
-        <a href="#">
-          <img src="assets/icons/linkedin.png">
-          Ver perfil
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="docente-card">
-    <div class="docente-img">
-      <img src="assets/images/doc3.png">
-    </div>
-
-    <div class="docente-info">
-      <div class="docente-top">
-        <h3>Luis Herrera</h3>
-        <img src="assets/icons/uni3.png">
-      </div>
-
-      <span>Profesor de Estadística</span>
-
-      <div class="docente-bottom">
-        <a href="#">
-          <img src="assets/icons/linkedin.png">
-          Ver perfil
-        </a>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-    <!-- TESTIMONIO DESTACADO -->
-    <div class="testimonio-highlight">
-
-      <div class="quote-icon">“</div>
-
-      <p id="testimonio-text">
-        
-“MentorEdu me ha permitido identificar con anticipación a los estudiantes que presentan dificultades. Antes, este proceso era manual y tomaba mucho tiempo. Ahora puedo actuar de manera oportuna y brindar apoyo más personalizado, lo que impacta directamente en el rendimiento del grupo.”.
+      <p class="hands-subtitle">
+        Supervisa el progreso de tus estudiantes, identifica riesgos y toma decisiones pedagógicas basadas en datos en tiempo real.
       </p>
 
-      <div class="highlight-footer">
-
-        <div class="highlight-user">
-          <img id="testimonio-img" src="assets/images/doc1.png">
-
-          <div>
-            <strong id="testimonio-nombre">Carlos Mendoza</strong>
-            <div class="stars">★★★★★</div>
-          </div>
+      <div class="hands-buttons">
+        <div class="badge green">
+          <strong>+30%</strong>
+          <span>Mejora en seguimiento</span>
         </div>
 
-        <img id="testimonio-logo" class="highlight-uni" src="assets/icons/uni.png">
+        <div class="badge purple">
+          <strong>Tiempo real</strong>
+          <span>Monitoreo continuo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DERECHA (CUADRO) -->
+    <div class="features-box">
+      <h4>Funcionalidades</h4>
+      <ul>
+        <li>Panel de control por clase</li>
+        <li>Monitoreo individual y grupal</li>
+        <li>Identificación de alumnos en riesgo</li>
+        <li>Reportes académicos automatizados</li>
+      </ul>
+    </div>
+
+  </div>
+
+      <!-- Imagen DOCENTE -->
+      <div class="hands-image">
+        <img src="assets/images/docente-dashboard.png" alt="Panel docente">
+      </div>
+
+      <p class="hands-text">
+        <span class="brand">MentorEdu</span> permite a los <span class="highlight">docentes</span> analizar el 
+        <span class="highlight">desempeño</span> académico de sus estudiantes de forma clara y eficiente,
+        facilitando la <span class="highlight">detección temprana</span> de dificultades y mejorando la 
+        toma de <span class="highlight">decisiones</span>.
+      </p>
+
+      <!-- SEPARACIÓN -->
+      <div class="section-divider"></div>
+
+      <!-- ESTUDIANTE -->
+      <span class="section-tag">ESTUDIANTE</span>
+
+      <h2>Control total de tu aprendizaje</h2>
+
+      <!-- Imagen -->
+      <div class="hands-image">
+        <img src="assets/images/estudiante-dashboard.png" alt="Panel estudiante">
+      </div>
+
+      <p class="hands-text">
+        Con una interfaz intuitiva, <span class="brand">MentorEdu</span> ayuda a los 
+        <span class="highlight">estudiantes</span> a visualizar su progreso, identificar 
+        <span class="highlight">debilidades</span> y tomar <span class="highlight">acciones</span> 
+        concretas para mejorar su <span class="highlight">rendimiento</span>.
+      </p>
+
+    </div>
+  </section>
+
+
+  <section id="testimonios" class="testimonios">
+    <div class="container">
+
+      <!-- ALUMNOS -->
+      <span class="section-tag">ALUMNOS</span>
+      <h2>Lo que dicen nuestros estudiantes</h2>
+
+      <div class="testimonios-grid">
+
+        <div class="testimonio-card">
+          <div class="testimonio-header">
+            <img src="assets/images/user1.png" alt="">
+            <span class="badge-small green">+20% Mejora</span>
+          </div>
+          <h3>Ana Torres</h3>
+          <span class="role">Ingeniería de Software</span>
+          <p>
+            “Antes no tenía claro cómo iba en mis cursos. Con MentorEdu pude ver mi progreso en tiempo real y saber exactamente en qué debo mejorar.”
+          </p>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-header">
+            <img src="assets/images/user2.png" alt="">
+            <span class="badge-small green">+18% Mejora</span>
+          </div>
+          <h3>Camila Rojas</h3>
+          <span class="role">Psicología</span>
+          <p>
+            “Las alertas han sido clave. Me avisan cuando estoy bajando rendimiento y puedo reaccionar a tiempo.”
+          </p>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-header">
+            <img src="assets/images/user3.png" alt="">
+            <span class="badge-small green">+15% Mejora</span>
+          </div>
+          <h3>Luis Fernández</h3>
+          <span class="role">Administración</span>
+          <p>
+            “El dashboard me da una visión clara de cómo voy y qué debo mejorar. Todo está mucho más organizado.”
+          </p>
+        </div>
 
       </div>
 
-      <button class="arrow left" onclick="prevTestimonio()">‹</button>
-      <button class="arrow right" onclick="nextTestimonio()">›</button>
+      <!-- DOCENTES -->
+  <span class="section-tag mt">DOCENTES</span>
+  <h2>Lo que dicen nuestros docentes</h2>
+
+  <div class="docentes-grid">
+
+    <div class="docente-card">
+      <div class="docente-img">
+        <img src="assets/images/doc1.png">
+      </div>
+
+      <div class="docente-info">
+        <div class="docente-top">
+          <h3>Carlos Mendoza</h3>
+          <img src="assets/icons/uni.png">
+        </div>
+
+        <span>Profesor de Matemática</span>
+
+        <div class="docente-bottom">
+          <a href="#">
+            <img src="assets/icons/linkedin.png">
+            Ver perfil
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="docente-card">
+      <div class="docente-img">
+        <img src="assets/images/doc2.png">
+      </div>
+
+      <div class="docente-info">
+        <div class="docente-top">
+          <h3>José Ramírez</h3>
+          <img src="assets/icons/uni2.png">
+        </div>
+
+        <span>Profesor de Ingeniería</span>
+
+        <div class="docente-bottom">
+          <a href="#">
+            <img src="assets/icons/linkedin.png">
+            Ver perfil
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="docente-card">
+      <div class="docente-img">
+        <img src="assets/images/doc3.png">
+      </div>
+
+      <div class="docente-info">
+        <div class="docente-top">
+          <h3>Luis Herrera</h3>
+          <img src="assets/icons/uni3.png">
+        </div>
+
+        <span>Profesor de Estadística</span>
+
+        <div class="docente-bottom">
+          <a href="#">
+            <img src="assets/icons/linkedin.png">
+            Ver perfil
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+      <!-- TESTIMONIO DESTACADO -->
+      <div class="testimonio-highlight">
+
+        <div class="quote-icon">“</div>
+
+        <p id="testimonio-text">
+          
+  “MentorEdu me ha permitido identificar con anticipación a los estudiantes que presentan dificultades. Antes, este proceso era manual y tomaba mucho tiempo. Ahora puedo actuar de manera oportuna y brindar apoyo más personalizado, lo que impacta directamente en el rendimiento del grupo.”.
+        </p>
+
+        <div class="highlight-footer">
+
+          <div class="highlight-user">
+            <img id="testimonio-img" src="assets/images/doc1.png">
+
+            <div>
+              <strong id="testimonio-nombre">Carlos Mendoza</strong>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+          <img id="testimonio-logo" class="highlight-uni" src="assets/icons/uni.png">
+
+        </div>
+
+        <button class="arrow left" onclick="prevTestimonio()">‹</button>
+        <button class="arrow right" onclick="nextTestimonio()">›</button>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="faq" class="faq">
+
+  <div class="container">
+
+  <span class="section-tag">HAZ TUS PREGUNTAS</span>
+  <h2>Preguntas Frecuentes</h2>
+
+
+  <div class="faq-item">
+
+  <button class="faq-question">
+
+  <span class="faq-left">
+  <span class="faq-icon">+</span>
+  <span>¿Necesito conocimientos técnicos para usar la plataforma?</span>
+  </span>
+
+  <span class="faq-arrow">></span>
+
+  </button>
+
+  <div class="faq-answer">
+  MentorEdu está diseñado para ser intuitivo. No necesitas experiencia técnica para comenzar a usarlo.
+  </div>
+
+  </div>
+
+
+  <div class="faq-item">
+
+  <button class="faq-question">
+
+  <span class="faq-left">
+  <span class="faq-icon">+</span>
+  <span>¿Cómo se generan las alertas académicas?</span>
+  </span>
+
+  <span class="faq-arrow">></span>
+
+  </button>
+
+  <div class="faq-answer">
+  Las alertas se generan automáticamente mediante análisis del rendimiento académico en tiempo real.
+  </div>
+
+  </div>
+
+
+  <div class="faq-item">
+
+  <button class="faq-question">
+
+  <span class="faq-left">
+  <span class="faq-icon">+</span>
+  <span>¿Puedo usar MentorEdu desde mi celular?</span>
+  </span>
+
+  <span class="faq-arrow">></span>
+
+  </button>
+
+  <div class="faq-answer">
+  Sí. MentorEdu funciona correctamente en computadoras, tablets y teléfonos móviles.
+  </div>
+
+  </div>
+
+
+  <div class="faq-item">
+
+  <button class="faq-question">
+
+  <span class="faq-left">
+  <span class="faq-icon">+</span>
+  <span>¿Mis datos están seguros?</span>
+  </span>
+
+  <span class="faq-arrow">></span>
+
+  </button>
+
+  <div class="faq-answer">
+  Utilizamos protocolos modernos de seguridad para proteger la información académica y personal.
+  </div>
+
+  </div>
+
+  </div>
+
+  </section>
+
+
+  <section id="cta" class="cta">
+    <div class="container cta-box">
+
+      <div class="cta-left">
+        <h2>Empieza a mejorar tu rendimiento académico hoy</h2>
+
+        <p>
+          Únete a MentorEdu y toma el control de tu aprendizaje o enseñanza
+          con herramientas inteligentes diseñadas para el seguimiento académico.
+        </p>
+      </div>
+
+      <div class="cta-form">
+
+    <img src="assets/images/girl.png" class="cta-image">
+
+    <input type="text" placeholder="Nombre completo">
+    <input type="email" placeholder="Dirección de correo electrónico">
+    <input type="tel" placeholder="Número de teléfono">
+
+    <select>
+      <option>Seleccione categoría</option>
+      <option>Docente</option>
+      <option>Estudiante</option>
+      <option>Institución</option>
+    </select>
+
+    <input type="text" placeholder="Institución">
+
+    <p class="cta-terms">
+      Al enviar el formulario, acepta nuestros Términos y Condiciones y
+      nuestra Política de Privacidad.
+    </p>
+
+    <div class="cta-buttons">
+
+      <button class="btn-primary">
+        Registrarse
+      </button>
+
+      <button class="btn-secondary">
+        Ya tengo cuenta
+      </button>
 
     </div>
 
   </div>
-</section>
 
-  <section id="faq"></section>
+    </div>
+  </section>
 
-  <section id="cta"></section>
 
-  <footer></footer>
+  <footer id="footer" class="footer">
+
+    <div class="container footer-grid">
+
+      <div>
+
+      <div class="logo">
+        <img src="assets/icons/logow.png">
+        <span class="footer-logo-text">MentorEdu</span>
+      </div>
+
+        <p>
+          MentorEdu es una plataforma educativa diseñada para mejorar el
+          seguimiento académico mediante análisis en tiempo real, alertas
+          tempranas y reportes inteligentes que apoyan la toma de decisiones
+          pedagógicas.
+        </p>
+      </div>
+
+      <div>
+        <h4>Enlaces útiles</h4>
+
+  <div class="socials">
+
+        <a href="#">
+        <img src="assets/icons/face.png">
+        </a>
+
+        <a href="#">
+        <img src="assets/icons/linkedin.png">
+        </a>
+
+        <a href="#">
+        <img src="assets/icons/tw.png">
+        </a>
+
+        </div>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+
+        <p>Av. Javier Prado Este 4600, Santiago de Surco, Lima, Perú</p>
+        <p>+51 987 654 321</p>
+        <p>contacto@mentoredu.pe</p>
+      </div>
+
+    </div>
+
+    <div class="footer-copy">
+      © 2026 MentorEdu | Todos los derechos reservados
+    </div>
+
+  </footer>
+
+<script src="scripts/main.js"></script>
 
 </body>
 </html>
