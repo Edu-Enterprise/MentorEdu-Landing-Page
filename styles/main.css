@@ -1185,7 +1185,22 @@ grid-template-columns:repeat(1,1fr);
 }
 
 .docentes-grid{
-grid-template-columns:repeat(2,1fr);
+display: grid;
+gap: 25px;
+margin: 40px 0;
+max-width: 350px;
+align-items: center;
+grid-template-columns:repeat(1,1fr);
+}
+
+
+.docente-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
 }
 
 }
