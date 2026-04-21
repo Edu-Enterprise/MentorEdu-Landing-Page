@@ -588,9 +588,8 @@ html {
 .docente-img {
   width: 100%;
   aspect-ratio: 1 / 1;
-  max-height: 210px;
-  max-width: 210px;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .docente-img img {
