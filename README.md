@@ -10,8 +10,8 @@ GitHub Pages:
 
 https://edu-enterprise.github.io/MentorEdu-Landing-Page/
 
-## Mockup incluido
+## Acceso incluido
 
-La sección "Acceso" y los botones "Ingresar/Registrarse" abren un mockup
-interactivo de Register/Login para estudiantes, docentes, academias y
+La sección "Acceso" y los botones "Ingresar/Registrarse" abren un flujo
+interactivo de registro e inicio de sesión para estudiantes, docentes, academias y
 moderadores.

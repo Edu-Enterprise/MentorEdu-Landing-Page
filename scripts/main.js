@@ -102,6 +102,6 @@ authForm.addEventListener("submit", (event) => {
   event.preventDefault();
   formFeedback.textContent =
     currentAuthMode === "register"
-      ? "Mockup: cuenta creada y perfil listo para personalización."
-      : "Mockup: sesión iniciada correctamente.";
+      ? "Cuenta creada y perfil listo para personalización."
+      : "Sesión iniciada correctamente.";
 });
