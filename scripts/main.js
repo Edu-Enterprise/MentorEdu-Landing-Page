@@ -1,103 +1,107 @@
-// =========================
-// FAQ
-// =========================
-document.addEventListener("DOMContentLoaded", () => {
-
-  document.querySelectorAll(".faq-question").forEach(button => {
-
-    button.addEventListener("click", () => {
-
-      const item = button.parentElement;
-      item.classList.toggle("active");
-
-      const icon = item.querySelector(".faq-icon");
-
-      icon.textContent = item.classList.contains("active") ? "-" : "+";
-
-    });
-
-  });
-
-});
-
-
-// =========================
-// HAMBURGER MENU
-// =========================
 const hamburger = document.getElementById("hamburger");
 const nav = document.getElementById("nav");
+const authModal = document.getElementById("authModal");
+const authForm = document.getElementById("authForm");
+const authTitle = document.getElementById("authTitle");
+const authSubtitle = document.getElementById("authSubtitle");
+const formFeedback = document.getElementById("formFeedback");
+const registerTab = document.getElementById("registerTab");
+const loginTab = document.getElementById("loginTab");
+const authSubmit = document.querySelector(".auth-submit");
+const registerOnlyFields = document.querySelectorAll(".register-only");
 
-hamburger.addEventListener("click", () => {
+let currentAuthMode = "register";
 
-  nav.classList.toggle("active");
+function setMenuState(isOpen) {
+  nav.classList.toggle("active", isOpen);
+  hamburger.textContent = isOpen ? "×" : "☰";
+  hamburger.setAttribute("aria-expanded", String(isOpen));
+  hamburger.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+}
 
-  hamburger.textContent =
-    nav.classList.contains("active") ? "✕" : "☰";
+function setAuthMode(mode) {
+  currentAuthMode = mode;
+  const isRegister = mode === "register";
 
-});
-
-document.querySelectorAll(".nav a").forEach(link => {
-
-  link.addEventListener("click", () => {
-    nav.classList.remove("active");
-    hamburger.textContent = "☰";
+  registerTab.classList.toggle("active", isRegister);
+  loginTab.classList.toggle("active", !isRegister);
+  registerOnlyFields.forEach((field) => {
+    field.hidden = !isRegister;
   });
 
+  authTitle.textContent = isRegister ? "Crea tu cuenta" : "Ingresa a MentorEdu";
+  authSubtitle.textContent = isRegister
+    ? "Empieza a guardar exámenes, resolver dudas y ganar puntos."
+    : "Continúa tu preparación desde tus exámenes, foros y retos guardados.";
+  authSubmit.textContent = isRegister ? "Crear cuenta" : "Ingresar";
+  formFeedback.textContent = "";
+}
+
+function openAuthModal(mode = "register") {
+  setAuthMode(mode);
+  authModal.classList.add("open");
+  authModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+  setTimeout(() => document.getElementById("email").focus(), 50);
+}
+
+function closeAuthModal() {
+  authModal.classList.remove("open");
+  authModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+  formFeedback.textContent = "";
+}
+
+hamburger.addEventListener("click", () => {
+  setMenuState(!nav.classList.contains("active"));
 });
 
-document.addEventListener("click", (e) => {
+document.querySelectorAll(".nav a").forEach((link) => {
+  link.addEventListener("click", () => setMenuState(false));
+});
 
-  if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
-    nav.classList.remove("active");
-    hamburger.textContent = "☰";
+document.addEventListener("click", (event) => {
+  if (!hamburger.contains(event.target) && !nav.contains(event.target)) {
+    setMenuState(false);
   }
-
 });
 
+document.querySelectorAll(".faq-question").forEach((button) => {
+  button.addEventListener("click", () => {
+    const item = button.closest(".faq-item");
+    const icon = item.querySelector(".faq-icon");
+    const isActive = item.classList.toggle("active");
 
-// =========================
-// TESTIMONIOS SLIDER
-// =========================
-const testimonios = [
-      {
-        texto: "“MentorEdu me ha permitido identificar con anticipación a los estudiantes que presentan dificultades. Antes, este proceso era manual y tomaba mucho tiempo. Ahora puedo actuar de manera oportuna y brindar apoyo más personalizado, lo que impacta directamente en el rendimiento del grupo.”.",
-        nombre: "Carlos Mendoza",
-        img: "assets/images/doc1.png",
-        logo: "assets/icons/uni.png"
-      },
-      {
-        texto: "“La plataforma facilita enormemente el seguimiento académico. Los reportes automáticos y las alertas me permiten tomar decisiones basadas en datos reales, en lugar de intuición. Esto mejora la calidad de la enseñanza y optimiza el tiempo dentro y fuera del aula.”",
-        nombre: "José Ramírez",
-        img: "assets/images/doc2.png",
-        logo: "assets/icons/uni2.png"
-      },
-      {
-        texto: "“Una de las mayores ventajas de MentorEdu es la visibilidad que ofrece sobre el progreso de los estudiantes. Puedo ver patrones de comportamiento, detectar riesgos y ajustar mis estrategias de enseñanza. Es una herramienta que realmente aporta valor al proceso educativo.”",
-        nombre: "Luis Herrera",
-        img: "assets/images/doc3.png",
-        logo: "assets/icons/uni3.png"
-      }
-];
+    icon.textContent = isActive ? "-" : "+";
+  });
+});
 
-let index = 0;
+document.querySelectorAll("[data-auth-open]").forEach((button) => {
+  button.addEventListener("click", () => {
+    openAuthModal(button.dataset.authTab || "register");
+  });
+});
 
-function updateTestimonio() {
-  document.getElementById("testimonio-text").innerText = testimonios[index].texto;
-  document.getElementById("testimonio-nombre").innerText = testimonios[index].nombre;
-  document.getElementById("testimonio-img").src = testimonios[index].img;
-  document.getElementById("testimonio-logo").src = testimonios[index].logo;
-}
+document.querySelectorAll("[data-auth-close]").forEach((button) => {
+  button.addEventListener("click", closeAuthModal);
+});
 
-function nextTestimonio() {
-  index = (index + 1) % testimonios.length;
-  updateTestimonio();
-}
+document.querySelectorAll("[data-auth-switch]").forEach((button) => {
+  button.addEventListener("click", () => {
+    setAuthMode(button.dataset.authSwitch);
+  });
+});
 
-function prevTestimonio() {
-  index = (index - 1 + testimonios.length) % testimonios.length;
-  updateTestimonio();
-}
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && authModal.classList.contains("open")) {
+    closeAuthModal();
+  }
+});
 
-// hacer funciones globales (porque usas onclick en HTML)
-window.nextTestimonio = nextTestimonio;
-window.prevTestimonio = prevTestimonio;
+authForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  formFeedback.textContent =
+    currentAuthMode === "register"
+      ? "Mockup: cuenta creada y perfil listo para personalización."
+      : "Mockup: sesión iniciada correctamente.";
+});

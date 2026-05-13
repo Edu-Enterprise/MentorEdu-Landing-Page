@@ -2,532 +2,416 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>MentorEdu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MentorEdu: repositorio colaborativo de exámenes de admisión, foros por pregunta y gamificación para postulantes peruanos.">
+  <title>MentorEdu | Repositorio preuniversitario colaborativo</title>
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-
   <header class="header">
-    <div class="container">
-        
-        <div class="logo">
-        <img src="assets/icons/logo.png" alt="MentorEdu">
+    <div class="container header-inner">
+      <a class="logo" href="#inicio" aria-label="Inicio MentorEdu">
+        <img src="assets/icons/logo.png" alt="">
         <span>MentorEdu</span>
-        </div>
+      </a>
 
-        <nav class="nav" id="nav">
-        <a href="#banner">Inicio</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#funcionalidades">Servicios</a>
-        <a href="#testimonios">Testimonios</a>
+      <nav class="nav" id="nav" aria-label="Navegacion principal">
+        <a href="#repositorio">Repositorio</a>
+        <a href="#comunidad">Comunidad</a>
+        <a href="#gamificacion">Gamificación</a>
+        <a href="#moderacion">Moderación</a>
+        <a href="#acceso">Acceso</a>
         <a href="#faq">FAQ</a>
-        <a href="#footer">Contacto</a>
-        </nav>
+      </nav>
 
-        <button class="btn-outline">Registrarse</button>
-        <div class="hamburger" id="hamburger">☰</div>
+      <div class="header-actions">
+        <button class="btn btn-ghost" data-auth-open data-auth-tab="login">Ingresar</button>
+        <button class="btn btn-primary" data-auth-open data-auth-tab="register">Registrarse</button>
+      </div>
 
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">☰</button>
     </div>
   </header>
 
-
-  <section id="banner" class="banner">
-    <div class="container banner-content">
-
-      <h1>
-        Una plataforma con <span class="highlight">todo</span> lo que un 
-        <span class="highlight">profesor</span> necesita <br>
-        para <span class="highlight">gestionar</span> eficazmente a sus 
-        <span class="highlight">alumnos</span>.
-      </h1>
-
-      <p>
-        <span class="brand">MentorEdu</span> hace que todo el procedimiento sea increíblemente simple y rápido,
-        independientemente de la cantidad de estudiantes o clases que tenga que administrar.
-      </p>
-
-      <button class="btn-primary">Empieza Aquí</button>
-
-      <div class="banner-image">
-        <img src="assets/images/dashboard.png" alt="MentorEdu Dashboard">
-      </div>
-
-    </div>
-  </section>
-
-
-  <section id="beneficios" class="beneficios">
-    <div class="container">
-
-      <span class="section-tag">BENEFICIOS</span>
-      <h2>¿Por qué usar nuestra aplicacion ?</h2>
-
-      <div class="beneficios-grid">
-
-        <div class="card">
-          <div class="icon"><img src="assets/icons/hourglass.png" alt="hourglass"></div>
-          <h3>Seguimiento en tiempo real</h3>
-          <p>
-            Visualiza el progreso académico de manera clara e inmediata, sin esperar evaluaciones finales.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon"><img src="assets/icons/alert.png" alt="alert"></div>
-          <h3>Alertas tempranas inteligentes</h3>
-          <p>
-            Detecta riesgos de bajo rendimiento y actúa antes de que sea demasiado tarde.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon"><img src="assets/icons/book.png" alt="book"></div>
-          <h3>Mejora del aprendizaje</h3>
-          <p>
-            Recibe recomendaciones personalizadas para optimizar el estudio y mejorar resultados.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <section id="funcionalidades" class="hands-on">
-    <div class="container">
-
-      <!-- DOCENTE -->
-      <span class="section-tag">DOCENTE</span>
-
-      <div class="hands-top">
-
-    <!-- IZQUIERDA -->
-    <div class="hands-left">
-      <h2>Gestión inteligente del aula</h2>
-
-      <p class="hands-subtitle">
-        Supervisa el progreso de tus estudiantes, identifica riesgos y toma decisiones pedagógicas basadas en datos en tiempo real.
-      </p>
-
-      <div class="hands-buttons">
-        <div class="badge green">
-          <strong>+30%</strong>
-          <span>Mejora en seguimiento</span>
-        </div>
-
-        <div class="badge purple">
-          <strong>Tiempo real</strong>
-          <span>Monitoreo continuo</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- DERECHA (CUADRO) -->
-    <div class="features-box">
-      <h4>Funcionalidades</h4>
-      <ul>
-        <li>Panel de control por clase</li>
-        <li>Monitoreo individual y grupal</li>
-        <li>Identificación de alumnos en riesgo</li>
-        <li>Reportes académicos automatizados</li>
-      </ul>
-    </div>
-
-  </div>
-
-      <!-- Imagen DOCENTE -->
-      <div class="hands-image">
-        <img src="assets/images/docente-dashboard.png" alt="Panel docente">
-      </div>
-
-      <p class="hands-text">
-        <span class="brand">MentorEdu</span> permite a los <span class="highlight">docentes</span> analizar el 
-        <span class="highlight">desempeño</span> académico de sus estudiantes de forma clara y eficiente,
-        facilitando la <span class="highlight">detección temprana</span> de dificultades y mejorando la 
-        toma de <span class="highlight">decisiones</span>.
-      </p>
-
-      <!-- SEPARACIÓN -->
-      <div class="section-divider"></div>
-
-      <!-- ESTUDIANTE -->
-      <span class="section-tag">ESTUDIANTE</span>
-
-      <h2>Control total de tu aprendizaje</h2>
-
-      <!-- Imagen -->
-      <div class="hands-image">
-        <img src="assets/images/estudiante-dashboard.png" alt="Panel estudiante">
-      </div>
-
-      <p class="hands-text">
-        Con una interfaz intuitiva, <span class="brand">MentorEdu</span> ayuda a los 
-        <span class="highlight">estudiantes</span> a visualizar su progreso, identificar 
-        <span class="highlight">debilidades</span> y tomar <span class="highlight">acciones</span> 
-        concretas para mejorar su <span class="highlight">rendimiento</span>.
-      </p>
-
-    </div>
-  </section>
-
-
-  <section id="testimonios" class="testimonios">
-    <div class="container">
-
-      <!-- ALUMNOS -->
-      <span class="section-tag">ALUMNOS</span>
-      <h2>Lo que dicen nuestros estudiantes</h2>
-
-      <div class="testimonios-grid">
-
-        <div class="testimonio-card">
-          <div class="testimonio-header">
-            <img src="assets/images/user1.png" alt="">
-            <span class="badge-small green">+20% Mejora</span>
-          </div>
-          <h3>Ana Torres</h3>
-          <span class="role">Ingeniería de Software</span>
-          <p>
-            “Antes no tenía claro cómo iba en mis cursos. Con MentorEdu pude ver mi progreso en tiempo real y saber exactamente en qué debo mejorar.”
-          </p>
-        </div>
-
-        <div class="testimonio-card">
-          <div class="testimonio-header">
-            <img src="assets/images/user2.png" alt="">
-            <span class="badge-small green">+18% Mejora</span>
-          </div>
-          <h3>Camila Rojas</h3>
-          <span class="role">Psicología</span>
-          <p>
-            “Las alertas han sido clave. Me avisan cuando estoy bajando rendimiento y puedo reaccionar a tiempo.”
-          </p>
-        </div>
-
-        <div class="testimonio-card">
-          <div class="testimonio-header">
-            <img src="assets/images/user3.png" alt="">
-            <span class="badge-small green">+15% Mejora</span>
-          </div>
-          <h3>Luis Fernández</h3>
-          <span class="role">Administración</span>
-          <p>
-            “El dashboard me da una visión clara de cómo voy y qué debo mejorar. Todo está mucho más organizado.”
-          </p>
-        </div>
-
-      </div>
-
-      <!-- DOCENTES -->
-  <span class="section-tag mt">DOCENTES</span>
-  <h2>Lo que dicen nuestros docentes</h2>
-
-  <div class="docentes-grid">
-
-    <div class="docente-card">
-      <div class="docente-img">
-        <img src="assets/images/doc1.png">
-      </div>
-
-      <div class="docente-info">
-        <div class="docente-top">
-          <h3>Carlos Mendoza</h3>
-          <img src="assets/icons/uni.png">
-        </div>
-
-        <span>Profesor de Matemática</span>
-
-        <div class="docente-bottom">
-          <a href="#">
-            <img src="assets/icons/linkedin.png">
-            Ver perfil
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="docente-card">
-      <div class="docente-img">
-        <img src="assets/images/doc2.png">
-      </div>
-
-      <div class="docente-info">
-        <div class="docente-top">
-          <h3>José Ramírez</h3>
-          <img src="assets/icons/uni2.png">
-        </div>
-
-        <span>Profesor de Ingeniería</span>
-
-        <div class="docente-bottom">
-          <a href="#">
-            <img src="assets/icons/linkedin.png">
-            Ver perfil
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="docente-card">
-      <div class="docente-img">
-        <img src="assets/images/doc3.png">
-      </div>
-
-      <div class="docente-info">
-        <div class="docente-top">
-          <h3>Luis Herrera</h3>
-          <img src="assets/icons/uni3.png">
-        </div>
-
-        <span>Profesor de Estadística</span>
-
-        <div class="docente-bottom">
-          <a href="#">
-            <img src="assets/icons/linkedin.png">
-            Ver perfil
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-      <!-- TESTIMONIO DESTACADO -->
-      <div class="testimonio-highlight">
-
-        <div class="quote-icon">“</div>
-
-        <p id="testimonio-text">
-          
-  “MentorEdu me ha permitido identificar con anticipación a los estudiantes que presentan dificultades. Antes, este proceso era manual y tomaba mucho tiempo. Ahora puedo actuar de manera oportuna y brindar apoyo más personalizado, lo que impacta directamente en el rendimiento del grupo.”.
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Repositorio + foros + retos para postulantes</p>
+        <h1>Practica con exámenes reales, resuelve dudas y sube de nivel antes del examen.</h1>
+        <p class="hero-copy">
+          MentorEdu conecta a estudiantes preuniversitarios del Perú con exámenes de admisión organizados,
+          discusiones por pregunta y recompensas por compartir soluciones útiles.
         </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-large" data-auth-open data-auth-tab="register">Crear cuenta gratis</button>
+          <a class="btn btn-glass btn-large" href="#repositorio">Ver propuesta</a>
+        </div>
 
-        <div class="highlight-footer">
+        <div class="hero-metrics" aria-label="Indicadores objetivo">
+          <div>
+            <strong>+20%</strong>
+            <span>retención mensual esperada</span>
+          </div>
+          <div>
+            <strong>24h</strong>
+            <span>resolución de reportes</span>
+          </div>
+          <div>
+            <strong>5+</strong>
+            <span>respuestas por duda activa</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="highlight-user">
-            <img id="testimonio-img" src="assets/images/doc1.png">
-
+    <section id="repositorio" class="section repository">
+      <div class="container split">
+        <div class="section-copy">
+          <p class="section-tag">Repositorio documental</p>
+          <h2>Exámenes de UNMSM, UNI, PUCP y otras universidades en un solo lugar.</h2>
+          <p>
+            Los postulantes pueden buscar por universidad, ciclo, curso, tema y dificultad. Cada documento
+            puede incluir solucionario, comentarios, votos de calidad y preguntas enlazadas a foros.
+          </p>
+          <div class="feature-list">
             <div>
-              <strong id="testimonio-nombre">Carlos Mendoza</strong>
-              <div class="stars">★★★★★</div>
+              <span>01</span>
+              <p>Subida rápida desde celular para compartir exámenes o solucionarios en segundos.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <p>Filtros por carrera, año, tipo de examen y nivel de confianza del material.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <p>Recomendaciones personalizadas según exámenes descargados y temas revisados.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-panel document-panel" aria-label="Mockup de repositorio documental">
+          <div class="panel-top">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="search-bar">Buscar: Pregunta 15 UNI 2024-I</div>
+          <div class="document-row verified">
+            <div>
+              <strong>UNI 2024-I Matemática</strong>
+              <small>Solucionario verificado por Academia Vector</small>
+            </div>
+            <span>98%</span>
+          </div>
+          <div class="document-row">
+            <div>
+              <strong>UNMSM 2025-II Aptitud</strong>
+              <small>42 comentarios por pregunta</small>
+            </div>
+            <span>76%</span>
+          </div>
+          <div class="document-row">
+            <div>
+              <strong>PUCP 2023 Ciencias</strong>
+              <small>12 preguntas guardadas</small>
+            </div>
+            <span>81%</span>
+          </div>
+          <div class="upload-strip">
+            <span>Subir examen</span>
+            <strong>+120 pts</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comunidad" class="section community">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Comunidad de aprendizaje</p>
+          <h2>Foros organizados por examen, curso y pregunta específica.</h2>
+          <p>
+            En lugar de perder dudas en grupos desordenados, MentorEdu concentra cada discusión donde pertenece:
+            junto al ejercicio que el postulante está intentando resolver.
+          </p>
+        </div>
+
+        <div class="community-grid">
+          <article class="info-card">
+            <img src="assets/images/user1.png" alt="Estudiante revisando una duda">
+            <h3>Dudas con contexto</h3>
+            <p>Publica una pregunta enlazada al examen, adjunta tu procedimiento y recibe respuestas ordenadas por votos.</p>
+          </article>
+          <article class="info-card">
+            <img src="assets/images/user2.png" alt="Estudiante participando en foro">
+            <h3>Notificaciones útiles</h3>
+            <p>Recibe avisos cuando alguien responde, corrige o mejora la solución que estabas siguiendo.</p>
+          </article>
+          <article class="info-card">
+            <img src="assets/images/user3.png" alt="Estudiante celebrando progreso">
+            <h3>Menos ansiedad</h3>
+            <p>Convierte el "no sé si estoy preparado" en evidencias claras de temas fuertes y brechas por cerrar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gamificacion" class="section gamification">
+      <div class="container split split-reverse">
+        <div class="phone-mockup" aria-label="Mockup móvil de gamificación">
+          <div class="phone-header">
+            <span>Nivel 8</span>
+            <strong>Reto diario</strong>
+          </div>
+          <div class="coin-balance">2,450 monedas</div>
+          <div class="progress-track">
+            <span style="width: 72%"></span>
+          </div>
+          <div class="quest done">Responder 3 dudas de algebra <strong>+60</strong></div>
+          <div class="quest">Subir solucionario validado <strong>+120</strong></div>
+          <div class="quest">Completar simulacro UNMSM <strong>+90</strong></div>
+          <div class="badge-wall">
+            <span>UNI</span>
+            <span>Top 5%</span>
+            <span>Verificado</span>
+          </div>
+        </div>
+
+        <div class="section-copy">
+          <p class="section-tag">Gamificación</p>
+          <h2>Participar también debe sentirse rápido, visible y motivador.</h2>
+          <p>
+            El sistema recompensa acciones que crean valor para la comunidad: subir documentos, resolver dudas,
+            validar solucionarios y mantener una racha de práctica.
+          </p>
+          <div class="stats-grid">
+            <div>
+              <strong>30%</strong>
+              <span>más usuarios contribuyendo al mes</span>
+            </div>
+            <div>
+              <strong>70%</strong>
+              <span>usuarios más seguros tras 4 semanas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="moderacion" class="section moderation">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Actuadores y confianza</p>
+          <h2>Moderadores, docentes y academias con herramientas claras.</h2>
+          <p>
+            MentorEdu también considera a quienes mantienen la calidad del ecosistema: administradores,
+            moderadores, academias verificadas y docentes que publican material especializado.
+          </p>
+        </div>
+
+        <div class="moderation-grid">
+          <article class="admin-panel">
+            <div class="panel-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <h3>Panel de reportes</h3>
+            <div class="report-line high">
+              <span>Spam en solucionario</span>
+              <strong>Ocultar</strong>
+            </div>
+            <div class="report-line">
+              <span>Contenido duplicado</span>
+              <strong>Rechazar</strong>
+            </div>
+            <div class="report-line">
+              <span>Apelación pendiente</span>
+              <strong>Revisar</strong>
+            </div>
+          </article>
+
+          <article class="actor-card">
+            <h3>Academias verificadas</h3>
+            <p>Badge de confianza, visibilidad en documentos y opción de publicar contenido premium.</p>
+            <strong>Meta: 5 academias/docentes en 6 meses</strong>
+          </article>
+
+          <article class="actor-card">
+            <h3>Historial transparente</h3>
+            <p>Acciones de moderación visibles sin datos sensibles y flujo de apelación para estudiantes.</p>
+            <strong>Meta: 90% de reportes en menos de 24h</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="acceso" class="section access">
+      <div class="container split">
+        <div class="section-copy">
+          <p class="section-tag">Mockup Register/Login</p>
+          <h2>Ingreso simple para estudiantes, docentes, academias y moderadores.</h2>
+          <p>
+            El mockup muestra el primer flujo de adopción: crear cuenta, elegir rol, iniciar sesión y acceder
+            a recomendaciones o herramientas según el perfil.
+          </p>
+          <div class="access-actions">
+            <button class="btn btn-primary" data-auth-open data-auth-tab="register">Probar registro</button>
+            <button class="btn btn-outline-dark" data-auth-open data-auth-tab="login">Probar login</button>
+          </div>
+        </div>
+
+        <div class="auth-preview" aria-label="Mockup de registro">
+          <div class="auth-tabs">
+            <button class="active">Registro</button>
+            <button>Login</button>
+          </div>
+          <label>Nombre completo</label>
+          <div class="fake-input">Andrea Salazar</div>
+          <label>Correo</label>
+          <div class="fake-input">andrea@mentoredu.pe</div>
+          <label>Perfil</label>
+          <div class="fake-select">Estudiante preuniversitario</div>
+          <button class="btn btn-primary auth-demo-button">Crear cuenta</button>
+          <p>Desbloquea exámenes, foros por pregunta y progreso gamificado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Preguntas frecuentes</p>
+          <h2>Lo esencial para validar la idea.</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>¿MentorEdu reemplaza a una academia?</span>
+              <span class="faq-icon">-</span>
+            </button>
+            <div class="faq-answer">
+              No. Complementa la preparación con exámenes reales, discusiones por pregunta y señales de progreso.
             </div>
           </div>
 
-          <img id="testimonio-logo" class="highlight-uni" src="assets/icons/uni.png">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Por qué el enfoque está en smartphones?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Porque los postulantes suelen buscar, preguntar y compartir material desde el celular durante sus rutinas de estudio.
+            </div>
+          </div>
 
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Cómo se controla la calidad del contenido?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Con reportes, moderación centralizada, votos de la comunidad, badges verificados y trazabilidad de acciones.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>¿Qué datos ayudan a personalizar recomendaciones?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Exámenes descargados, preguntas revisadas, temas marcados como difíciles y actividad en foros.
+            </div>
+          </div>
         </div>
-
-        <button class="arrow left" onclick="prevTestimonio()">‹</button>
-        <button class="arrow right" onclick="nextTestimonio()">›</button>
-
       </div>
-
-    </div>
-  </section>
-
-
-  <section id="faq" class="faq">
-
-  <div class="container">
-
-  <span class="section-tag">HAZ TUS PREGUNTAS</span>
-  <h2>Preguntas Frecuentes</h2>
-
-
-  <div class="faq-item">
-
-  <button class="faq-question">
-
-  <span class="faq-left">
-  <span class="faq-icon">+</span>
-  <span>¿Necesito conocimientos técnicos para usar la plataforma?</span>
-  </span>
-
-  <span class="faq-arrow">></span>
-
-  </button>
-
-  <div class="faq-answer">
-  MentorEdu está diseñado para ser intuitivo. No necesitas experiencia técnica para comenzar a usarlo.
-  </div>
-
-  </div>
-
-
-  <div class="faq-item">
-
-  <button class="faq-question">
-
-  <span class="faq-left">
-  <span class="faq-icon">+</span>
-  <span>¿Cómo se generan las alertas académicas?</span>
-  </span>
-
-  <span class="faq-arrow">></span>
-
-  </button>
-
-  <div class="faq-answer">
-  Las alertas se generan automáticamente mediante análisis del rendimiento académico en tiempo real.
-  </div>
-
-  </div>
-
-
-  <div class="faq-item">
-
-  <button class="faq-question">
-
-  <span class="faq-left">
-  <span class="faq-icon">+</span>
-  <span>¿Puedo usar MentorEdu desde mi celular?</span>
-  </span>
-
-  <span class="faq-arrow">></span>
-
-  </button>
-
-  <div class="faq-answer">
-  Sí. MentorEdu funciona correctamente en computadoras, tablets y teléfonos móviles.
-  </div>
-
-  </div>
-
-
-  <div class="faq-item">
-
-  <button class="faq-question">
-
-  <span class="faq-left">
-  <span class="faq-icon">+</span>
-  <span>¿Mis datos están seguros?</span>
-  </span>
-
-  <span class="faq-arrow">></span>
-
-  </button>
-
-  <div class="faq-answer">
-  Utilizamos protocolos modernos de seguridad para proteger la información académica y personal.
-  </div>
-
-  </div>
-
-  </div>
-
-  </section>
-
-
-  <section id="cta" class="cta">
-    <div class="container cta-box">
-
-      <div class="cta-left">
-        <h2>Empieza a mejorar tu rendimiento académico hoy</h2>
-
-        <p>
-          Únete a MentorEdu y toma el control de tu aprendizaje o enseñanza
-          con herramientas inteligentes diseñadas para el seguimiento académico.
-        </p>
-      </div>
-
-      <div class="cta-form">
-
-    <img src="assets/images/girl.png" class="cta-image">
-
-    <input type="text" placeholder="Nombre completo">
-    <input type="email" placeholder="Dirección de correo electrónico">
-    <input type="tel" placeholder="Número de teléfono">
-
-    <select>
-      <option>Seleccione categoría</option>
-      <option>Docente</option>
-      <option>Estudiante</option>
-      <option>Institución</option>
-    </select>
-
-    <input type="text" placeholder="Institución">
-
-    <p class="cta-terms">
-      Al enviar el formulario, acepta nuestros Términos y Condiciones y
-      nuestra Política de Privacidad.
-    </p>
-
-    <div class="cta-buttons">
-
-      <button class="btn-primary">
-        Registrarse
-      </button>
-
-      <button class="btn-secondary">
-        Ya tengo cuenta
-      </button>
-
-    </div>
-
-  </div>
-
-    </div>
-  </section>
-
+    </section>
+  </main>
 
   <footer id="footer" class="footer">
-
     <div class="container footer-grid">
-
       <div>
-
-      <div class="logo">
-        <img src="assets/icons/logow.png">
-        <span class="footer-logo-text">MentorEdu</span>
-      </div>
-
+        <a class="logo footer-logo" href="#inicio">
+          <img src="assets/icons/logow.png" alt="">
+          <span>MentorEdu</span>
+        </a>
         <p>
-          MentorEdu es una plataforma educativa diseñada para mejorar el
-          seguimiento académico mediante análisis en tiempo real, alertas
-          tempranas y reportes inteligentes que apoyan la toma de decisiones
-          pedagógicas.
+          Plataforma colaborativa para el ecosistema preuniversitario peruano:
+          exámenes de admisión, foros, gamificación y moderación comunitaria.
         </p>
       </div>
 
       <div>
-        <h4>Enlaces útiles</h4>
-
-  <div class="socials">
-
-        <a href="#">
-        <img src="assets/icons/face.png">
-        </a>
-
-        <a href="#">
-        <img src="assets/icons/linkedin.png">
-        </a>
-
-        <a href="#">
-        <img src="assets/icons/tw.png">
-        </a>
-
-        </div>
+        <h4>Producto</h4>
+        <a href="#repositorio">Repositorio</a>
+        <a href="#comunidad">Foros</a>
+        <a href="#gamificacion">Gamificación</a>
+        <a href="#moderacion">Moderación</a>
       </div>
 
       <div>
         <h4>Contacto</h4>
-
-        <p>Av. Javier Prado Este 4600, Santiago de Surco, Lima, Perú</p>
-        <p>+51 987 654 321</p>
+        <p>Lima, Perú</p>
         <p>contacto@mentoredu.pe</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><img src="assets/icons/face.png" alt=""></a>
+          <a href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.png" alt=""></a>
+          <a href="#" aria-label="Twitter"><img src="assets/icons/tw.png" alt=""></a>
+        </div>
       </div>
-
     </div>
-
-    <div class="footer-copy">
-      © 2026 MentorEdu | Todos los derechos reservados
-    </div>
-
+    <div class="footer-copy">© 2026 MentorEdu | Landing page v2 desplegable en cloud</div>
   </footer>
 
-<script src="scripts/main.js"></script>
+  <div class="modal" id="authModal" aria-hidden="true">
+    <div class="modal-backdrop" data-auth-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" data-auth-close aria-label="Cerrar">×</button>
+      <div class="auth-card">
+        <div class="auth-card-copy">
+          <p class="section-tag">Acceso MentorEdu</p>
+          <h2 id="authTitle">Crea tu cuenta</h2>
+          <p id="authSubtitle">Empieza a guardar exámenes, resolver dudas y ganar puntos.</p>
+        </div>
 
+        <div class="auth-tabs" role="tablist">
+          <button class="active" id="registerTab" data-auth-switch="register" type="button">Registro</button>
+          <button id="loginTab" data-auth-switch="login" type="button">Login</button>
+        </div>
+
+        <form class="auth-form" id="authForm">
+          <div class="register-only">
+            <label for="fullName">Nombre completo</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Ej. Andrea Salazar">
+          </div>
+
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" placeholder="tu.correo@ejemplo.com" required>
+
+          <label for="password">Contraseña</label>
+          <input id="password" name="password" type="password" placeholder="••••••••" required>
+
+          <div class="register-only">
+            <label for="role">Tipo de perfil</label>
+            <select id="role" name="role">
+              <option>Estudiante preuniversitario</option>
+              <option>Docente</option>
+              <option>Academia verificada</option>
+              <option>Moderador</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary auth-submit" type="submit">Crear cuenta</button>
+          <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
 </body>
 </html>
